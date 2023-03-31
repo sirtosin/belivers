@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 import Button from "./Button";
 import Result from "./Result";
 import Timer from "./Timer";
@@ -36,10 +37,21 @@ const Question = ({ question, setShowQuestion, setDiffculty }) => {
   }, [time]);
 
   const handleSelect = (i) => {
-    if (selected === i && selected === question[count].correct_answer)
-      return setColor("select");
-    else if (i === question[count].correct_answer) return setColor("select");
-    else return setColor("wrong");
+    if (selected === i && selected === question[count].correct_answer){
+    //   toast.error();
+      setColor("select");
+
+    }
+    else if (i === question[count].correct_answer){
+    //   toast.error();
+      setColor("select");
+
+    } 
+    else {
+      setColor("wrong");
+      toast.success(`correct answer: ${question[count].correct_answer}`);
+
+    }
   };
 
   const handleCheck = (i) => {
