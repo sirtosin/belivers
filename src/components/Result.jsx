@@ -24,7 +24,7 @@ const Result = ({ score, question, setShowQuestion, setDiffculty }) => {
       <p className="font-semibold text-sm text-gray-500 capitalize">share on</p>
       <div className="flex items-center space-x-10">
         <FacebookShareButton
-          url={"http://www.camperstribe.com"}
+          url={"https://www.facebook.com/profile.php?id=100085041733989"}
           quote={`Your Quiz score is ${score}`}
           hashtag="#quiz"
           className={``}
